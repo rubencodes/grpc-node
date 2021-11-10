@@ -175,7 +175,7 @@ exports.loadPackageDefinition = function loadPackageDefintion(packageDef) {
     if (service.hasOwnProperty('format')) {
       current[serviceName] = service;
     } else {
-      current[serviceName] = client.makeClientConstructor(service, serviceName, {});
+      current[serviceName] = exports.makeGenericClientConstructor(service, serviceName, {});
     }
   }
   return result;
